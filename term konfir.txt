@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<?php include "koneksi/fungsi.php";
+ include "header.php";
+ include "footer.php";
+ include "koneksi/koneksi.php";
+?>
+
+<body>
+  <!-- **********************************************************************************************************************************************************
+      MAIN CONTENT
+      *********************************************************************************************************************************************************** -->
+  <div>
+    <div class="container">
+      <form class="form-login" action="8.rekapusulan.php">
+        <h2 class="form-login-heading">Warning</h2>
+        <div class="text-center">
+          <h4 class="title"> Apakah Anda Yakin Mengirim usulan ini? </h4>
+           
+          <br>
+
+          </div>
+          <span> Catatan: Apabila Usulan telah dikirim, anda tidak dapat melakukan perubahan lagi</span>
+          <hr>
+            <a  href="1.index1.php"><button type="submit" class="btn btn-theme">Cancel</button></a>
+                
+            <span class="pull-right">
+            <a  href="1.index2.php"><buttontype="submit" class="btn btn-theme">OK</button></a>
+            
+                   
+          
+        <!-- Modal -->
+        
+        <!-- modal -->
+      </form>
+    </div>
+  </div>
+  <!-- js placed at the end of the document so the pages load faster -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+  <!--BACKSTRETCH-->
+  <!-- You can use an image of whatever size. This script will stretch to fit in any screen size.-->
+  <script type="text/javascript" src="lib/jquery.backstretch.min.js"></script>
+  <script>
+    $.backstretch("img/portfolio/port01", {
+      speed: 500
+    });
+  </script>
+</body>
+
+</html>

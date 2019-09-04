@@ -1,0 +1,18 @@
+<div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal" class="modal fade">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title"> LOGIN GAGAL!</h4>
+              </div>
+              <div class="modal-body">
+              	<p> Username atau Password Anda tidak benar.<br>
+        			Atau account Anda sedang diblokir.<br><br></p>
+                <a href='3.login.php'><img src='image/seru.png'  height=147 width=176><br><br></a>
+              </div>
+              <div class="modal-footer">
+                <center><input type=button class='btn btn-default' value='ULANGI LAGI' onclick=location.href='3.login.php'></a></center>
+              </div>
+            </div>
+          </div>
+  </div>

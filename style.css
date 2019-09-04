@@ -1,0 +1,30 @@
+{
+    margin: 0;
+    padding: 0;}
+ 
+    body {
+    background: #90C59A;
+}
+
+    .container {
+    width: 350px;
+    margin:10px auto;
+    padding: 30px;
+    background: #40E8F5;
+    border-radius: 5px;
+    border: 1px solid #c5c4c4;
+    color: #5a5757;
+}
+
+p {font-size: 20px; text-align: center;}
+.active, input[type='text'] {width: 350px;
+        height: 35px;
+        margin: 10px 0 0 0;}
+
+.group {position: relative;}
+.fa {position: absolute;
+    bottom: 12px;
+    float: right;
+    left: 324px;
+    cursor: pointer;
+}

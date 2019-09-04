@@ -1,0 +1,81 @@
+<aside>
+      <div id="sidebar" class="nav-collapse ">
+        <!-- sidebar menu start-->
+        <ul class="sidebar-menu" id="nav-accordion">
+          <p class="centered"><a href="profile.php">
+            <?php 
+              if (isset($_SESSION['username'])) {
+                echo "<img src='$_SESSION[foto]' class='img-circle' width='80'></a></p>";
+           } else {
+            echo '<img src="image/user.PNG" class="img-circle" width="80"></a></p>';   
+          }
+          ?>
+          <h5 class="centered">KOMINFO</h5>
+          <li class="mt">
+            <?php 
+              if ($_SESSION != NULL) {
+                # code...
+              ?>
+            <a href="1_index.php">
+              <i class="fa fa-dashboard"></i>
+              <span>HALAMAN UTAMA</span>
+            </a>
+          </li>
+          <?php
+          if ((isset($_SESSION['level'])) & (($_SESSION['level']=='DPRD') OR ($_SESSION['level']== 'SUPERADMIN'))) {
+          ?>
+            <li class="sub-menu">
+            <a href="#">
+             <i class="fa fa-th"></i>
+             <span>KEGIATAN</span>
+             </a>
+              <ul class="sub">
+              
+              <li><a href="7_modalreses.php">Input Reses</a></li>
+              <li><a href="6_usulankegiatan.php">Input Kegiatan</a></li>
+              <li><a href="8_rekapusulan.php">Rekap Usulan</a></li>
+              </ul>
+            </li>
+           <?php } else {} ?>
+          <?php
+          if ((isset($_SESSION['level'])) & (($_SESSION['level']=='SETWAN') OR ($_SESSION['level']== 'SUPERADMIN'))) {
+          ?> 
+          <li class="sub-menu">
+            <a href="#">
+              <i class="fa fa-book"></i>
+              <span>DATA PARTAI</span>
+              </a>
+              <ul class="sub">
+              <li><a href="4_inputdapil.php">Input Dapil</a></li>
+              <li><a href="5_inputfraksi.php">Input Partai Pengusung</a></li>
+              </ul>
+          </li>
+          <?php } else {} ?> 
+          <li class="sub-menu">
+            <a href="#">            
+              <i class="fa fa-tasks"></i>
+              <span>PROFILE PENGGUNA</span>
+            </a>
+            <ul class="sub">
+              <?php
+              if ((isset($_SESSION['level'])) & (($_SESSION['level']=='DPRD') OR ($_SESSION['level']== 'SUPERADMIN'))) {
+              ?>
+              <li><a href="2_profildprd.php">Profil DPRD</a></li>
+              <?php } else {} ?>
+               <?php
+                if ((isset($_SESSION['level'])) & (($_SESSION['level']=='SKPD') OR ($_SESSION['level']== 'SUPERADMIN'))) {
+                ?>
+              <li><a href="13_profileuser.php">Profil User</a></li>
+              <?php } else {} ?>
+              <?php
+              if ((isset($_SESSION['level'])) & (($_SESSION['level']=='SETWAN') OR ($_SESSION['level']=='VERIFIKASI') OR ($_SESSION['level']== 'SUPERADMIN'))) {
+              ?>
+              <li><a href="15_profilesetwan.php">Profil Setwan</a></li>
+              <li><a href="14_profileverifikasi.php">Input Partai Pengusung</a></li>
+              <?php } else {} ?>              
+             <?php
+              if ((isset($_SESSION['level'])) & (($_SESSION['level']=='SETWAN') OR ($_SESSION['level']=='VERIFIKASI') OR ($_SESSION['level']== 'SUPERADMIN'))) {
+              ?>
+              <li><a href="14_profileverifikasi.php">Profil Verifikasi</a></li>
+              <?php } else{} ?>
+            </ul> 
